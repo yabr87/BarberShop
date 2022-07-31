@@ -6,6 +6,7 @@
   --fifth-text-color: #555555;
   --accent-color: #ff6c00;
   --booking-bg-color: #191c26;
+  --barbers-bg-color: #f7f7f7;
 }
 
 body {
@@ -40,7 +41,8 @@ ul {
   padding: 0;
 }
 
-img {
+img,
+svg {
   display: block;
 }
 
@@ -362,7 +364,7 @@ img {
   height: 133px;
   text-align: center;
   padding: 24px 20px;
-  background-color: #f7f7f7;
+  background-color: var(--barbers-bg-color);
 }
 
 .benefits-item > span {
@@ -372,13 +374,12 @@ img {
   letter-spacing: 0.05em;
 }
 
-.benefits-item > sup {
+.benefits-item sup {
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
   color: var(--accent-color);
-  top: -1.3em;
-  left: -0.3em;
+  vertical-align: super;
 }
 .benefits-item-text {
   font-weight: 600;
@@ -407,6 +408,80 @@ img {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: var(--fifth-text-color);
+}
+
+/* --- BARBERS --- */
+
+.barbers {
+  background-color: var(--barbers-bg-color);
+  padding: 120px 0;
+}
+
+.barbers-title {
+  margin-bottom: 44px;
+}
+.barbers-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.barbers-item-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(25 / 14);
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin-top: 30px;
+}
+.barbers-item-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  margin: 8px 0 30px;
+}
+.barbers-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.barbers-soc-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: currentColor;
+}
+.barbers-soc-icon {
+  fill: currentColor;
+}
+
+/* ---- GALERY ---- */
+.gallery {
+  padding: 120px 0;
+}
+.container {
+}
+.gallery-pre-title {
+  margin-bottom: 44px;
+}
+.pre-title {
+}
+.visually-hidden {
+}
+.gallery-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.list {
+}
+.gallery-item {
 }
 
 /* ---- FOOTER ---- */
