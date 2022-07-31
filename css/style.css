@@ -465,23 +465,15 @@ svg {
 .gallery {
   padding: 120px 0;
 }
-.container {
-}
+
 .gallery-pre-title {
   margin-bottom: 44px;
 }
-.pre-title {
-}
-.visually-hidden {
-}
+
 .gallery-list {
   display: flex;
   justify-content: center;
   gap: 30px;
-}
-.list {
-}
-.gallery-item {
 }
 
 /* ---- FOOTER ---- */
