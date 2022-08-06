@@ -6,7 +6,7 @@
   --fifth-text-color: #555555;
   --accent-color: #ff6c00;
   --booking-bg-color: #191c26;
-  --barbers-bg-color: #f7f7f7;
+  --barbers-bg-color: #f0f0f0;
 }
 
 body {
@@ -44,10 +44,15 @@ ul {
 img,
 svg {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
+.imag {
+  width: 270px;
+}
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
   outline: 2px dashed red;
@@ -238,6 +243,7 @@ svg {
 
 .about-list {
   display: flex;
+  justify-content: center;
   gap: 30px;
   padding: 120px 100px 120px 0;
 }
@@ -284,6 +290,7 @@ svg {
 
 .prices-box {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
 }
@@ -299,6 +306,7 @@ svg {
 
 .prices-list {
   width: calc(50% - 15px);
+
   padding: 30px 20px;
 }
 
@@ -422,6 +430,7 @@ svg {
 }
 .barbers-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
@@ -472,6 +481,7 @@ svg {
 
 .gallery-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
