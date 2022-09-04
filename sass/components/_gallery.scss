@@ -1,0 +1,22 @@
+.gallery {
+  padding: 84px 0;
+
+  @include tablet {
+    padding: 100px 0;
+  }
+
+  @include desktop {
+    padding: 120px 0;
+  }
+}
+
+.gallery-pre-title {
+  margin-bottom: 44px;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}

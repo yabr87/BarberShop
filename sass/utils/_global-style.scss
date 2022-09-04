@@ -1,0 +1,97 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  // outline: 1px solid red;
+
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+    padding: 0 31px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding: 0 39px;
+  }
+  @include desktop {
+    max-width: 1200px;
+    padding: 0 15px;
+  }
+}
+
+.container.head-box {
+  @include tablet {
+    padding: 0 0 0 50px;
+  }
+
+  @include desktop {
+    padding: 0 0 0 15px;
+  }
+}
+
+.container.hero-box {
+  @media screen and (min-width: 768px) {
+    padding: 0 0 0 39px;
+  }
+
+  @include desktop {
+    padding: 0 0 0 15px;
+  }
+}
+
+.link {
+  text-decoration: none;
+  transition: color 250ms ease;
+}
+
+.link:hover,
+.link:focus {
+  color: $accent-color;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.line-w::before {
+  display: inline-block;
+  content: "";
+  width: 0.7px;
+  height: 58px;
+  background-color: currentColor;
+}
+
+.pre-title::before {
+  display: inline-block;
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
+  margin: 4px 20px 4px 0;
+}
+
+.pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}

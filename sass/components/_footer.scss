@@ -1,0 +1,43 @@
+.footer {
+  padding: 54px 0;
+  background-color: $barbers-bg-color;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copy {
+  padding: 0;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #9da4bd;
+}
+
+.footer-list {
+  display: flex;
+}
+
+.footer-item {
+  &:first-child::before {
+    display: inline-block;
+    content: "";
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
+    margin: 4px 0px 4px 0;
+  }
+}
+
+.footer-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: $first-text-color;
+  margin-left: 40px;
+}

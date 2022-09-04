@@ -1,0 +1,74 @@
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 84px 0;
+
+  @include tablet {
+    padding: 100px 0;
+  }
+
+  @include desktop {
+    padding: 120px 0;
+  }
+}
+
+.about-list {
+  display: none;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 50%;
+    gap: 30px;
+  }
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.about-item {
+  flex-basis: 100%;
+  @include desktop {
+    flex-basis: 50%;
+  }
+}
+.about-item-text {
+  flex-basis: 100%;
+  @include tablet {
+    flex-basis: 50%;
+  }
+  @include desktop {
+    padding-right: 85px;
+  }
+}
+
+.about-title {
+  font-size: 28px;
+  line-height: 1.178;
+  @include desktop {
+    font-size: 42px;
+    line-height: 1.167;
+  }
+}
+
+.about-after-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: $fifth-text-color;
+  margin-bottom: 20px;
+}
+.about-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: $fifth-text-color;
+  margin-bottom: 40px;
+}
+.about-btn {
+  color: currentColor;
+  margin-top: auto 0;
+}

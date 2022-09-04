@@ -1,0 +1,92 @@
+.contacts_wrapper {
+  @include desktop {
+    background-color: $booking-bg-color;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-size: calc(50% - 15px) 100%;
+    background-image: url("../img/contacts/contacts-d-min.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    @include retina {
+      background-image: url("../img/contacts/contacts-d@2x-min.jpg");
+    }
+  }
+}
+.contacts_container {
+  padding: 0;
+  @media screen and (max-width: 1199px) {
+    background-color: $booking-bg-color;
+  }
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 50%;
+  }
+}
+
+.booking {
+  flex-basis: 50%;
+  padding: 120px 30px 120px 15px;
+}
+
+.booking-title {
+  color: $second-text-color;
+  margin-bottom: 44px;
+}
+
+.form-item {
+  position: relative;
+}
+
+.form-input {
+  height: 24px;
+  background-color: transparent;
+  width: 100%;
+  margin-bottom: 44px;
+  border: none;
+  border-bottom: 1px solid $third-text-color;
+  color: $second-text-color;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $second-text-color;
+  }
+
+  &:hover + .form-label {
+    color: $second-text-color;
+  }
+
+  &:focus + .form-label {
+    color: $second-text-color;
+    transform: translateY(-30px);
+  }
+}
+
+.form-input:not(:focus):not(:placeholder-shown) + .form-label {
+  transform: translateY(-30px);
+  color: $accent-color;
+}
+
+.form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  transition: transform 250ms ease;
+  color: $third-text-color;
+  &::after {
+    content: "*";
+  }
+}
+
+.form-input--big {
+  height: 76px;
+  padding: 10px 0;
+  resize: none;
+}
+
+.booking-btn {
+  padding: 12px 62px;
+}

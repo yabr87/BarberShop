@@ -1,0 +1,102 @@
+// .header {
+//   display: none;
+// }
+
+.container.head-box {
+  position: absolute;
+  display: flex;
+  align-items: baseline;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header-logo {
+  min-width: 69px;
+  min-height: 56px;
+  margin-right: 145px;
+
+  @media screen and (max-width: 767px) {
+    fill: $second-text-color;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-right: 62px;
+  }
+}
+
+.logo-black {
+  position: absolute;
+  top: 22px;
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+
+.logo-white {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+
+  @include mobile {
+    top: 30px;
+    left: 31px;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.header-nav {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (max-width: 1199px) {
+    flex-basis: 100%;
+  }
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+}
+.header-item:not(:last-child) {
+  margin-right: 30px;
+}
+.header-link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.1em;
+  color: $second-text-color;
+  padding: 12px 0;
+}
+.header-tel,
+.header-btn {
+  margin-right: 45px;
+}
+
+.header-tel,
+.header-btn {
+  margin-right: 45px;
+}
+
+.header-btn {
+  margin-right: 20px;
+}
+
+.header-address {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+
+  @include tablet {
+    flex-direction: row-reverse;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+@import "./utils/mixins";
+@import "./utils/variables.scss";
+@import "./utils/reset";
+@import "./utils/global-style";
+
+@import "./components/header";
+@import "./components/hero";
+@import "./components/btn";
+@import "./components/about";
+@import "./components/prices";
+@import "./components/benefits";
+@import "./components/barbers";
+@import "./components/gallery";
+@import "./components/booking";
+@import "./components/contacts";
+@import "./components/footer";
+@import "./components/mobile-memu";

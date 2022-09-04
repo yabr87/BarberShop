@@ -1,0 +1,98 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 767px) {
+    padding: 84px 31px;
+    max-width: 480px;
+    margin: 0 auto;
+    background-image: url("../img/contacts/contacts-m-min.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include retina {
+      background-image: url("../img/contacts/contacts-m@2x-min.jpg");
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: row;
+    padding: 100px 39px;
+    max-width: 768px;
+    margin: 0 auto;
+    background-image: url("../img/contacts/contacts-t-min.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include retina {
+      background-image: url("../img/contacts/contacts-t@2x-min.jpg");
+    }
+  }
+
+  @include desktop {
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 120px 100px;
+  }
+}
+
+.contacts-title {
+  color: $second-text-color;
+  margin-bottom: 40px;
+}
+
+.contacts-item {
+  margin-bottom: 20px;
+
+  &:first-child {
+    width: 230px;
+  }
+  &:first-child > .contacts-link {
+    font-weight: 700;
+  }
+
+  &:last-child {
+    margin-bottom: 70px;
+  }
+
+  &:last-child > .contacts-link {
+    text-decoration-line: underline;
+  }
+}
+.contacts-link {
+  display: inline-flex;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  font-style: normal;
+  color: #9da4bd;
+}
+
+.contacts-icon {
+  min-width: 24px;
+  height: 30px;
+  margin-right: 16px;
+  stroke: currentColor;
+  stroke-width: 2px;
+}
+
+.contacts-pre-title {
+  color: $second-text-color;
+}
+
+.contacts-working-hours {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.contacts-address-wrapper {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-basis: 50%;
+  }
+}
+
+.working-hours-wrapper {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-basis: 50%;
+  }
+}

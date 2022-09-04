@@ -15,13 +15,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
       <div class="container head-box">
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu__icon menu__icon--open" width="40" height="40">
+            <use href="./img/icon.svg#icon-menu"></use>
+          </svg>
+        </button>
         <a href="./index.html" class="header-logo">
-          <img src="./img/logo.svg" alt="site logo" />
+          <img class="logo-black" src="./img/Logo-black.svg" alt="site logo" />
+          <img class="logo-white" src="./img/Logo-white.svg" alt="site logo" />
         </a>
 
         <nav class="header-nav">
@@ -41,13 +51,14 @@
           </ul>
         </nav>
         <div class="header-address">
+          <a href="#booking" class="header-btn btn link">Online-booking</a>
           <a href="tel:+380441111111" class="header-tel header-link link">
             +38 044 111 11 11
           </a>
-          <a href="#booking" class="header-btn btn link">Online-booking</a>
         </div>
       </div>
     </header>
+
     <main>
       <section class="hero">
         <div class="container hero-box">
@@ -87,27 +98,41 @@
 
       <section id="about" class="about">
         <div class="container">
-          <ul class="about-list list">
-            <li class="about-item imag">
-              <img src="./img/about-img-1.jpeg" alt="haircuts" width="270" height="445" />
-            </li>
-            <li class="about-item imag">
-              <img
-                class="imag"
-                src="./img/about-img-2.jpeg"
-                alt="haircuts"
-                width="270"
-                height="445"
-              />
-            </li>
+          <div class="about-wrapper">
+            <ul class="about-list list">
+              <li class="about-item">
+                <picture>
+                  <source
+                    srcset="./img/about/img1-d.jpg 1x, ./img/about/img1-d@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./img/about/img1-t.jpg 1x, ./img/about/img1-t@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
 
-            <li class="about-item">
+                  <img src="./img/about/img1-t.jpg" alt="haircuts" />
+                </picture>
+              </li>
+              <li class="about-item">
+                <picture>
+                  <source
+                    srcset="./img/about/img2-d.jpg 1x, ./img/about/img2-d@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./img/about/img2-t.jpg 1x, ./img/about/img2-t@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+
+                  <img src="./img/about/img2-t.jpg" alt="haircuts" />
+                </picture>
+              </li>
+            </ul>
+
+            <div class="about-item-text">
               <p class="about-pre-title pre-title">About</p>
-              <h2 class="about-title title">
-                Best Barbershop in
-                <br />
-                your city
-              </h2>
+              <h2 class="about-title title">Best Barbershop in your city</h2>
               <p class="about-after-title">
                 If you want to add more confidence to your image, you should definitely
                 visit us.
@@ -120,8 +145,8 @@
                 to us!
               </p>
               <button type="button" class="about-btn btn">Online-booking</button>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -174,6 +199,15 @@
 
       <section class="benefits">
         <div class="container">
+          <div class="benefits-content">
+            <p class="benefits-pre-title pre-title">Old traditional school</p>
+            <!-- prettier-ignore -->
+            <h2 class="benefits-title title">Why people come to us?</h2>
+            <p class="benefits-after-title">
+              Only good things are said about us. But it's better to see and feel 1 time
+              than read 10 times.
+            </p>
+          </div>
           <ul class="benefits-list list">
             <!-- prettier-ignore -->
             <li class="benefits-item">
@@ -197,30 +231,40 @@
               <p class="benefits-item-text">Gifts for regular customers</p>
             </li>
           </ul>
-          <div class="benefits-content">
-            <p class="benefits-pre-title pre-title">Old traditional school</p>
-            <!-- prettier-ignore -->
-            <h2 class="benefits-title title">Why people come<br /> to us?</h2>
-            <p class="benefits-after-title">
-              Only good things are said about us. But it's better to see and feel 1 time
-              than read 10 times.
-            </p>
-          </div>
         </div>
       </section>
-
+      <!-- -------------------------------------------------------------------- -->
       <section id="barbers" class="barbers">
         <div class="container">
           <p class="barbers-pre-title pre-title">for true enjoyers of the atmosphere</p>
           <h2 class="barbers-title title">Our barbers</h2>
           <ul class="barbers-list list">
             <li class="barbers-item">
-              <img
-                src="./img/barbers-img-1.jpeg"
-                alt="barbers image"
-                width="370"
-                height="346"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/barbers/barbers-d1-min.jpg    1x,
+                    ./img/barbers/barbers-d1@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/barbers/barbers-t1-min.jpg    1x,
+                    ./img/barbers/barbers-t1@2x-min.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/barbers/barbers-m1-min.jpg    1x,
+                    ./img/barbers/barbers-m1@2x-min.jpg 2x
+                  "
+                />
+
+                <img src="./img/barbers/barbers-m1-min.jpg" alt="barbers image" />
+              </picture>
+
               <h3 class="barbers-item-title">John Smith</h3>
               <p class="barbers-item-text">Extreme Barber</p>
               <ul class="barbers-soc-list list">
@@ -279,12 +323,30 @@
               </ul>
             </li>
             <li class="barbers-item">
-              <img
-                src="./img/barbers-img-2.jpeg"
-                alt="barbers image"
-                width="370"
-                height="346"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/barbers/barbers-d2-min.jpg    1x,
+                    ./img/barbers/barbers-d2@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/barbers/barbers-t2-min.jpg    1x,
+                    ./img/barbers/barbers-t2@2x-min.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/barbers/barbers-m2-min.jpg    1x,
+                    ./img/barbers/barbers-m2@2x-min.jpg 2x
+                  "
+                />
+
+                <img src="./img/barbers/barbers-m2-min.jpg" alt="barbers image" />
+              </picture>
               <h3 class="barbers-item-title">Michele Doe</h3>
               <p class="barbers-item-text">Extreme Barber</p>
               <ul class="barbers-soc-list list">
@@ -343,12 +405,30 @@
               </ul>
             </li>
             <li class="barbers-item">
-              <img
-                src="./img/barbers-img-3.jpeg"
-                alt="barbers image"
-                width="370"
-                height="346"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/barbers/barbers-d3-min.jpg    1x,
+                    ./img/barbers/barbers-d3@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/barbers/barbers-t3-min.jpg    1x,
+                    ./img/barbers/barbers-t3@2x-min.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/barbers/barbers-m3-min.jpg    1x,
+                    ./img/barbers/barbers-m3@2x-min.jpg 2x
+                  "
+                />
+
+                <img src="./img/barbers/barbers-m3-min.jpg" alt="barbers image" />
+              </picture>
               <h3 class="barbers-item-title">Alan Black</h3>
               <p class="barbers-item-text">Extreme Barber</p>
               <ul class="barbers-soc-list list">
@@ -416,90 +496,271 @@
           <h2 class="visually-hidden">Gallery</h2>
           <ul class="gallery-list list">
             <li class="gallery-item">
-              <img
-                src="./img/gallery-img-1.jpeg"
-                alt="gallery-img"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery/gallery-d1-min.jpg    1x,
+                    ./img/gallery/gallery-d1@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/gallery-t1-min.jpg    1x,
+                    ./img/gallery/gallery-t1@2x-min.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/gallery-m1-min.jpg    1x,
+                    ./img/gallery/gallery-m1@2x-min.jpg 2x
+                  "
+                />
+
+                <img src="./img/gallery/gallery-m1-min.jpg" alt="gallery image" />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img
-                src="./img/gallery-img-2.jpeg"
-                alt="gallery-img"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery/gallery-d2-min.jpg    1x,
+                    ./img/gallery/gallery-d2@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/gallery-t2-min.jpg    1x,
+                    ./img/gallery/gallery-t2@2x-min.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/gallery-m2-min.jpg    1x,
+                    ./img/gallery/gallery-m2@2x-min.jpg 2x
+                  "
+                />
+
+                <img src="./img/gallery/gallery-m2-min.jpg" alt="gallery image" />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img
-                src="./img/gallery-img-3.jpeg"
-                alt="gallery-img"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery/gallery-d3-min.jpg    1x,
+                    ./img/gallery/gallery-d3@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/gallery-t3-min.jpg    1x,
+                    ./img/gallery/gallery-t3@2x-min.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/gallery-m3-min.jpg    1x,
+                    ./img/gallery/gallery-m3@2x-min.jpg 2x
+                  "
+                />
+
+                <img src="./img/gallery/gallery-m3-min.jpg" alt="gallery image" />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img
-                src="./img/gallery-img-4.jpeg"
-                alt="gallery-img"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery/gallery-d4-min.jpg    1x,
+                    ./img/gallery/gallery-d4@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/gallery-t4-min.jpg    1x,
+                    ./img/gallery/gallery-t4@2x-min.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/gallery-m4-min.jpg    1x,
+                    ./img/gallery/gallery-m4@2x-min.jpg 2x
+                  "
+                />
+
+                <img src="./img/gallery/gallery-m4-min.jpg" alt="gallery image" />
+              </picture>
             </li>
           </ul>
         </div>
       </section>
 
-      <div class="container">
-        <section id="booking" class="booking">
-          <h2 class="booking-title title">Online-booking</h2>
-        </section>
+      <div class="contacts_wrapper">
+        <div class="contacts_container container">
+          <section id="booking" class="booking">
+            <h2 class="booking-title title">Online-booking</h2>
+            <form class="form" autocomplete="off">
+              <div class="form-item">
+                <input
+                  class="form-input"
+                  type="text"
+                  name="user-name"
+                  id="user-name-id"
+                  placeholder=" "
+                  required
+                />
+                <label class="form-label" for="user-name-id">Name</label>
+              </div>
 
-        <section id="contacts" class="contacts">
-          <h2 class="contacts-title title">Contacts</h2>
-          <address class="contacts-address">
-            <ul class="contacts-list list">
-              <li>
-                <a
-                  class="contacts-link link"
-                  href="https://goo.gl/maps/HtskVrAPcDGHSepL8"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                >
-                  st. Vasilkivska, 7A Kiev, 08132
-                </a>
-              </li>
-              <li>
-                <a class="contacts-link link" href="tel:+380441111111">
-                  +38 044 111 11 11
-                </a>
-              </li>
-              <li>
-                <a class="contacts-link link" href="mailto:barbershop@email.com">
-                  barbershop@email.com
-                </a>
-              </li>
-            </ul>
-          </address>
-          <p>working hours</p>
-          <p>Every day from 9:00 to 22:00</p>
-        </section>
+              <div class="form-item">
+                <input
+                  class="form-input"
+                  type="tel"
+                  name="user-tel"
+                  id="user-tel-id"
+                  placeholder=" "
+                  required
+                />
+                <label class="form-label" for="user-tel-id">Phone</label>
+              </div>
+
+              <div class="form-item form-textarea">
+                <textarea
+                  class="form-input form-input--big"
+                  name="user-text"
+                  id="user-text-id"
+                  placeholder=" "
+                ></textarea>
+                <label class="form-label" for="user-text-id">Message</label>
+              </div>
+
+              <button class="btn booking-btn" type="submit">Send</button>
+            </form>
+          </section>
+
+          <section id="contacts" class="contacts">
+            <div class="contacts-address-wrapper">
+              <h2 class="contacts-title title">Contacts</h2>
+              <address class="contacts-address">
+                <ul class="contacts-list list">
+                  <li class="contacts-item">
+                    <a
+                      class="contacts-link link"
+                      href="https://goo.gl/maps/HtskVrAPcDGHSepL8"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="contacts-icon" width="24" height="24">
+                        <use href="./img/icon.svg#icon-map-pin"></use>
+                      </svg>
+
+                      st. Vasilkivska, 7A Kiev, 08132
+                    </a>
+                  </li>
+                  <li class="contacts-item">
+                    <a class="contacts-link link" href="tel:+380441111111">
+                      <svg class="contacts-icon" width="24" height="24">
+                        <use href="./img/icon.svg#icon-phone"></use>
+                      </svg>
+                      +38 044 111 11 11
+                    </a>
+                  </li>
+                  <li class="contacts-item">
+                    <a class="contacts-link link" href="mailto:barbershop@email.com">
+                      <svg class="contacts-icon" width="24" height="24">
+                        <use href="./img/icon.svg#icon-mail"></use>
+                      </svg>
+                      barbershop@email.com
+                    </a>
+                  </li>
+                </ul>
+              </address>
+            </div>
+            <div class="working-hours-wrapper">
+              <p class="contacts-pre-title pre-title">working hours</p>
+              <p class="contacts-working-hours">Every day from 9:00 to 22:00</p>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
 
-    <footer class="foot">
+    <!-- <footer class="footer">
       <div class="container">
-        <p>&copy; Copyright 2020</p>
-        <ul>
-          <li>
-            <a href="" target="_blank" rel="noopener noreferrer nofollow">Instagram</a>
+        <div class="footer-copy">&copy; Copyright 2020</div>
+        <ul class="footer-list list">
+          <li class="footer-item">
+            <a
+              class="footer-link link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              Instagram
+            </a>
           </li>
-          <li>
-            <a href="" target="_blank" rel="noopener noreferrer nofollow">Youtube</a>
+          <li class="footer-item">
+            <a
+              class="footer-link link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              Youtube
+            </a>
           </li>
         </ul>
       </div>
-    </footer>
+    </footer> -->
+
+    <div class="menu menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu__icon menu__icon--close" width="40" height="40">
+          <use href="./img/icon.svg#icon-cross"></use>
+        </svg>
+      </button>
+
+      <nav class="navigation menu__navigation">
+        <ul class="navigation__menu-list list">
+          <li class="navigation__menu-item">
+            <a
+              class="navigation__menu-link navigation__menu-link--active link"
+              href="./index.html"
+            >
+              Студия
+            </a>
+          </li>
+          <li class="navigation__menu-item">
+            <a class="navigation__menu-link link" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="navigation__menu-item">
+            <a class="navigation__menu-link link" href="#address-webstudio">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="menu__bottom">
+        <div class="menu__address">
+          <a class="menu__mail link" href="mailto:info@example.com">info@example.com</a>
+          <a class="menu__tel link" href="tel:+380991111111">+38 099 111 11 11</a>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

@@ -1,0 +1,16 @@
+// COLORS
+$first-text-color: #303030;
+$second-text-color: #ffffff;
+$third-text-color: rgba(157, 164, 189, 0.6);
+$fourth-text-color: #9da4bd;
+$fifth-text-color: #555555;
+$accent-color: #ff6c00;
+$booking-bg-color: #191c26;
+$barbers-bg-color: #f0f0f0;
+// END COLORS
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: $first-text-color;
+  background-color: #ffffff;
+}
