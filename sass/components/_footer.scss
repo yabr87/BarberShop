@@ -1,12 +1,24 @@
 .footer {
-  padding: 54px 0;
   background-color: $barbers-bg-color;
+  @include tablet {
+    padding: 54px 0;
+  }
 }
 
 .footer .container {
+  padding-top: 30px;
+  padding-bottom: 30px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
   align-items: center;
+  row-gap: 30px;
+  @include mobile {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .footer-copy {
@@ -16,10 +28,19 @@
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #9da4bd;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    padding-top: 79px;
+    padding-bottom: 44px;
+  }
 }
 
 .footer-list {
   display: flex;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    padding-top: 44px;
+    padding-bottom: 79px;
+  }
 }
 
 .footer-item {

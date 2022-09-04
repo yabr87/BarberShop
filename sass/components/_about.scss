@@ -1,7 +1,4 @@
-.about-wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+.about {
   padding: 84px 0;
 
   @include tablet {
@@ -11,6 +8,12 @@
   @include desktop {
     padding: 120px 0;
   }
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 .about-list {
